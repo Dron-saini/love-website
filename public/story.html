@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe0f0, #fff);
+      font-family: 'Indie Flower', cursive;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 50px 20px;
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff69b4;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeSlideIn 1s ease forwards;
+    }
+
+    .story-item {
+      background-color: #fff0f6;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.1);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .story-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .story-item h4 {
+      color: #d63384;
+    }
+
+    .next-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .btn-next {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .btn-next:hover {
+      background-color: #e0529b;
+      transform: scale(1.05);
+    }
+
+    /* Falling hearts */
+    .heart {
+      color: #ff69b4;
+      font-size: 1.2rem;
+      position: fixed;
+      top: -10px;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Falling Hearts Container -->
+  <div id="hearts-container"></div>
+
+  <div class="container">
+    <h1><i class="fas fa-heart"></i> Our Story</h1>
+
+    <div class="story-item">
+      <h4>🌸 The First Time We Met</h4>
+      <p>
+        It was in the 6th grade when the teacher made us sit together and I never thought that you will be my wife.
+        I had no idea that smile would become my favorite forever.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h4>❤️ The Moment I Fell</h4>
+      <p>
+        Of course it was that "bhabhi" moment — when you blushed, smiled and your cheeks turned red. At that moment I fell in love with you.
+      </p>
+    </div>
+
+    <div class="story-item">
+      <h4>🌟 Every Day Since</h4>
+      <p>
+        You've been my favorite person, my comfort, and my joy. I’m grateful every single day that you chose me. This is just the beginning.
+      </p>
+    </div>
+
+    <div class="next-btn">
+      <a href="gallery.html" class="btn btn-next">Next <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <script>
+    // Fade-in animation for each story item one by one
+    $(document).ready(function () {
+      $('.story-item').each(function (i) {
+        setTimeout(() => {
+          $(this).addClass('show');
+        }, i * 600);
+      });
+    });
+
+    // Falling hearts animation
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+      heart.innerHTML = "💖";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: url("https://i.pinimg.com/originals/60/b3/b6/60b3b655ce49c2e17c844b7b9a19ebc1.jpg") no-repeat center center/cover;
+      font-family: 'Indie Flower', cursive;
+      color: #4b1e2f;
+      padding: 50px 20px;
+    }
+
+    .letter-container {
+      background: rgba(255, 248, 248, 0.95);
+      padding: 40px 30px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+
+    .letter-text {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      white-space: pre-line;
+      animation: typing 4s steps(120, end);
+      overflow: hidden;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    .next-btn {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn-next {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-next:hover {
+      background-color: #e0529b;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="letter-container">
+    <h1><i class="fas fa-envelope-open-heart"></i> My Love Letter</h1>
+    <div class="letter-text">
+      My love,
+
+      I still remember the day we first sat next to each other — who would've thought you'd become my forever person?
+
+      You've brought colors into my life, made the ordinary magical, and filled every moment with laughter and warmth.
+
+      Thank you for being patient with me, for loving me with all your heart, and for making me feel like the luckiest person in the world.
+
+      This website is just a tiny way of showing how much you mean to me. I love you more than words can ever say... and this is just the beginning.
+
+      Yours always,
+      Ann💗
+    </div>
+
+    <div class="next-btn">
+      <a href="nickname.html" class="btn btn-next">Next </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7 Promises</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to top right, #fff0f5, #ffe4e1);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .wrapper {
+      max-width: 950px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #d63384;
+      font-size: 3.2rem;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    .promise-card {
+      background-color: #fff8fc;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px auto;
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .promise-card h3 {
+      color: #ff4da6;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .promise-card p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .promise-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(214, 51, 132, 0.25);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .next-btn {
+      margin-top: 50px;
+    }
+
+    .btn-next {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-next:hover {
+      background-color: #e0529b;
+      transform: scale(1.07);
+    }
+
+    /* Floating Hearts Animation */
+    .heart {
+      position: fixed;
+      color: #ff69b4;
+      animation: floatHearts 5s linear infinite;
+      font-size: 18px;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1><i class="fas fa-heart"></i> My 7 Promises to You</h1>
+
+    <div class="promise-card" style="animation-delay: 0.1s;">
+      <h3>Nourishment</h3>
+        <p>"Ekam ishe vishnuḥ tvaṁ ishe tvam anuvrata bhava"</p>
+      <p>I promise to care for you, cook for you (maggi counts!), and always keep your tummy and heart full. 🍜💞</p>
+    </div>
+
+    <div class="promise-card" style="animation-delay: 0.3s;">
+      <h3> Strength</h3>
+      <p>"Dvitiyam ishe urjaṁ tvam anuvrata bhava"</p>
+      <p>I'll be your support, your shield, your hug pillow — through every storm and rainbow. 🌧️🌈</p>
+    </div>
+
+    <div class="promise-card" style="animation-delay: 0.5s;">
+      <h3>Prosperity</h3>
+      <p>"Tritiyam ishe rāyas poshāya tvam anuvrata bhava"</p>
+      <p>We’ll build a beautiful life filled with warmth, chai, laughter, and late-night talks. ☕🏠</p>
+    </div>
+
+    <div class="promise-card" style="animation-delay: 0.7s;">
+      <h3> Family & Togetherness</h3>
+      <p>"Chaturtham ishe toyaṁ mayi tvam anuvrata bhava"</p>
+      <p>With this step, we will acquire happiness by mutual love and devotion, and raise a happy family.</p>
+    </div>
+
+    <div class="promise-card" style="animation-delay: 0.9s;">
+      <h3>Children & Responsibility</h3>
+      <p>"Pañchamam ishe pasubhyo tvam anuvrata bhava"</p>
+      <p>With this fifth step, may we be blessed with noble children and nurture them together.</p>
+    </div>
+
+    <div class="promise-card" style="animation-delay: 1.1s;">
+      <h3>Health & Happiness</h3>
+      <p>"Shaṣṭham ishe ritu bhyo tvam anuvrata bhava"</p>
+      <p>With the sixth step, let us be healthy and lead a peaceful life together.</p>
+    </div>
+
+    <div class="promise-card" style="animation-delay: 1.3s;">
+      <h3>"Saptamam ishe sakha saptapadi bhava"</h3>
+      <p>With the final step, we become companions for life, sharing all joys and sorrows together.. 💫</p>
+    </div>
+
+    <div class="next-btn">
+      <a href="final.html" class="btn btn-next">Next <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Floating Hearts Script -->
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+      heart.innerText = "💖";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+
+</body>
+</html>

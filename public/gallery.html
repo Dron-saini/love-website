@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Gallery</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+      font-family: 'Indie Flower', cursive;
+      padding-top: 50px;
+      color: #d63384;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeZoom 1s forwards;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+    }
+
+    @keyframes fadeZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .next-btn {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .btn-next {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-next:hover {
+      background-color: #e0529b;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="fas fa-camera-retro"></i> My Cutie wifuuuu</h1>
+
+  <div class="gallery">
+    <!-- Replace src with your own images (local or hosted) -->
+    <img src="pics/WhatsApp Image 2025-07-23 at 11.48.47.jpeg" alt="pic1" style="animation-delay: 0s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.48 (1).jpeg" alt="pic2" style="animation-delay: 0.1s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.48.jpeg" alt="pic3" style="animation-delay: 0.2s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.49 (1).jpeg" alt="pic4" style="animation-delay: 0.3s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.49 (2).jpeg" alt="pic5" style="animation-delay: 0.4s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.49 (3).jpeg" alt="pic6" style="animation-delay: 0.5s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.49.jpeg" alt="pic7" style="animation-delay: 0.6s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.50 (1).jpeg" alt="pic8" style="animation-delay: 0.7s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.50 (2).jpeg" alt="pic9" style="animation-delay: 0.8s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.50.jpeg" alt="pic10" style="animation-delay: 0.9s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.51 (1).jpeg" alt="pic11" style="animation-delay: 1s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.51 (2).jpeg" alt="pic12" style="animation-delay: 1.1s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.51 (3).jpeg" alt="pic13" style="animation-delay: 1.2s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.51.jpeg" alt="pic14" style="animation-delay: 1.3s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.52 (1).jpeg" alt="pic15" style="animation-delay: 1.4s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.52 (2).jpeg" alt="pic16" style="animation-delay: 1.5s;">
+  <img src="pics/WhatsApp Image 2025-07-23 at 11.48.52.jpeg" alt="pic17" style="animation-delay: 1.6s;">
+  </div>
+
+  <div class="next-btn">
+    <a href="letter.html" class="btn btn-next">Next <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+</body>
+</html>

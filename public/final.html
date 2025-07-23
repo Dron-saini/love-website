@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forever & Always</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to top right, #fff0f5, #ffe4e1);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #d63384;
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #ff69b4;
+      margin-top: 40px;
+    }
+
+    .btns {
+      margin-top: 40px;
+    }
+
+    .btn-love {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 14px 35px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      margin: 10px;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-love:hover {
+      background-color: #e0529b;
+      transform: scale(1.07);
+    }
+
+    .hearts {
+      position: fixed;
+      color: #ff69b4;
+      font-size: 18px;
+      animation: floatHeart 5s linear infinite;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .final-words {
+      font-size: 2rem;
+      color: #ff4da6;
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1><i class="fas fa-heart"></i> Forever & Always</h1>
+    <p>
+        Dear Tanya , 
+      Thank you for going through this little journey with me.  
+      I made this with all my love, for the most special person in my life — **you**.  
+    </p>
+    <p>
+      Every moment we’ve spent together is etched in my heart.  
+      This is not just a website, it's a reflection of our memories, dreams, and promises.  
+    </p>
+    <p class="final-words">I love you more than words can say... 💖</p>
+    <div class="signature">Yours forever,<br/>Dron</div>
+
+    <div class="btns">
+      <a href="index.html" class="btn btn-love"><i class="fas fa-home"></i> Home</a>
+      <a href="gallery.html" class="btn btn-love"><i class="fas fa-images"></i> Gallery</a>
+      <a href="promises.html" class="btn btn-love"><i class="fas fa-hand-holding-heart"></i> Promises</a>
+    </div>
+  </div>
+
+  <!-- Floating Hearts Script -->
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("hearts");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+      heart.innerText = "💖";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+
+</body>
+</html>
